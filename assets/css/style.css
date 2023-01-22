@@ -1,0 +1,809 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: iranyekan;
+    src: url(../fonts/IRANSans_Medium.ttf);
+}
+
+@font-face {
+    font-family: iransansnum;
+    src: url(../fonts/IRANSansDNFaNum-Bold2.woff);
+}
+
+body {
+    font-family: iransansnum;
+    text-align: center;
+    max-width: 430px;
+    background-image: url(../images/pattern-min.png), linear-gradient(90deg, #0e4480, #2d95b9, #32c1d7, #33c7db, #32c1d7, #2d95b9, #0e4480);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* ---------------------------- */
+
+/* start landing page */
+
+#start-landing.deactive {
+    display: none;
+}
+
+#title {
+    width: 40%;
+    height:fit-content;
+    margin: 7% 5% 0% 0%;
+}
+
+#help {
+    width: 15%;
+    margin: 5% 0% 0% 5%;
+}
+
+#info {
+    width: 80%;
+    margin: auto;
+}
+
+#start-button {
+    width: 50%;
+    margin-top: 5%;
+}
+
+/* ----------------------------- */
+
+/* landing */
+
+#show-landing.deactive {
+    display: none;
+}
+
+.show-landing-container {
+    width: 95%;
+    margin: auto;
+}
+
+/* ----------------------------- */
+
+/* donut top */
+.notice {
+    position: relative;
+    margin-top: 2%;
+}
+
+.notice img {
+    max-width: 100%;
+    position: relative;
+}
+
+.cup {
+    width: 34.5%;
+    position: absolute;
+    top: 29%;
+    left: 33%;
+}
+
+.cup img {
+    max-width: 100%;
+}
+
+.cup.deactive {
+    display: none;
+}
+
+.donut-min {
+    width: 12%;
+    display: inline;
+    position: absolute;
+}
+
+.donut-min img {
+    max-width: 100%;
+}
+
+.donut-min.deactive img {
+    opacity: 0.6;
+}
+
+.donut4 {
+    top: 31%;
+    left: 8.5%;
+}
+
+.donut3 {
+    top: 61%;
+    left: 17%;
+}
+
+.donut2 {
+    top: 73%;
+    left: 44%;
+}
+
+.donut1{
+    top: 61%;
+    left: 71%;
+}
+
+.donut5 {
+    top: 31%;
+    left: 79.5%;
+}
+
+.get-coin {
+    position: absolute;
+    width: 30%;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.get-coin.deactive {
+    display: none;
+}
+
+.coin1 {
+    animation-name: coinget;
+    top: 10.5%;
+    left: 35%;
+}
+
+.coin2 {
+    animation-name: coinget2;
+    left: 20%;
+    /* top: 13%; */
+}
+
+@keyframes coinget {
+    0% {top: 4%;}
+    100% {top: 10.5%;}
+}
+
+@keyframes coinget2 {
+    0% {top: 6%;}
+    100% {top: 13%;}
+}
+
+/* -------------------------------------- */
+
+/* midlle box */
+
+.donut-box {
+    margin-top: 5%;
+}
+
+.donut-box img {
+    max-width: 100%;
+}
+
+.donuts.deactive {
+    display: none;
+}
+
+.donuts {
+    position: absolute;
+    width: 25%;
+}
+
+.donut {
+    width: 85%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 25%;
+    height: 86px;
+}
+
+.donuts1 {
+    top: 0%;
+    left: 1%;
+}
+
+.donuts2 {
+    top: 0%;
+    left: 25%;
+}
+
+.donuts3 {
+    top: 0%;
+    left: 50%;
+}
+
+.donuts4 {
+    top: 0%;
+    left: 75%;
+}
+
+.donuts5 {
+    top: 33%;
+    left: 0%;
+}
+
+.donuts6 {
+    top: 33%;
+    left: 25%;
+}
+
+.donuts7 {
+    top: 33%;
+    left: 50%;
+}
+
+.donuts8 {
+    top: 33%;
+    left: 75%;
+}
+
+.donuts9 {
+    top: 67%;
+    left: 0%;
+}
+
+.donuts10 {
+    top: 67%;
+    left: 25%;
+}
+
+.donuts11 {
+    top: 67%;
+    left: 50%;
+}
+
+.donuts12 {
+    top: 67%;
+    left: 75%;
+}
+
+/* -------------------------------- */
+
+/* show-info */
+#show-landing {
+    padding-bottom: 160px
+}
+
+.show-info {
+    position: fixed;
+    top: 74%;
+    height: 100px;
+    width: 32%;
+}
+
+.mission {
+    position: relative;
+}
+
+.nav img {
+    max-width: 100%;
+}
+
+.nav.deactive {
+    display: none;
+}
+
+/* choose mission */
+
+.mission-box {
+    width: 65%;
+}
+
+.donut-mission {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+.mission-reward {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.chocolate {
+    width: 13%;
+    position: absolute;
+    left: 85%;
+    top: 40%;
+}
+
+.choos-mission-button {
+    position: absolute;
+    top: 65%;
+}
+
+.choos-mission-button.deactive {
+    display: none;
+}
+
+.change-mission-button {
+    position: absolute;
+    width: 30%;
+    top: 70%;
+    left: 68%;
+}
+
+.change-mission-button.deactive {
+    display: none;
+}
+
+.progress-bar {
+    width: 65%;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #efefef;
+    display: flex;
+    position: absolute;
+    top: 75%;
+    left: 2%;
+}
+
+.progress-bar.deactive {
+    display: none;
+}
+
+.pr-bar {
+    background-image: linear-gradient(to top, #81ff8d 0% , #81ff8d 50% , #2aeb3c 50% , #2aeb3c 100% );
+    border-radius: 5px;
+}
+
+.gold-reward {
+    width: 65%;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.gold-reward.deactive {
+    display: none;
+}
+
+.reward-number {
+    position: absolute;
+    top: 43%;
+    left: 20%;
+}
+
+.reward-number.deactive {
+    display: none;
+}
+
+.reward-number span {
+    font-size: 45px;
+    color: #754100;
+}
+
+.chocolate img.deactive {
+    display: none;
+}
+
+.donut-mission-text {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    width: 64%;
+    font-size: 12.5px;
+    color: white;
+    direction: rtl;
+}
+
+.mission-reward-text {
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    font-size: 25px;
+    color: white;
+}
+
+.progress-bar-text {
+    position: absolute;
+    top: 74%;
+    left: 31%;
+    color: #1c4b43;
+}
+
+.progress-bar-text.deactive {
+    display: none;
+}
+
+/* -------------------------------- */
+
+
+
+/* --------------------------------- */
+
+/* popup */
+
+.popup {
+    position: fixed;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+}
+
+.popup.deactive {
+    display: none;
+}
+
+.popup-container {
+    position: relative;
+    width: 100%;
+}
+
+.select-change-mission-popup {
+    max-width: 430px;
+    position: absolute;
+    top: 10%;
+    left: 34.5%;
+}
+
+.select-change-mission-popup img {
+    width: 100%;
+}
+
+.close-button {
+    position: absolute;
+    width: 4%;
+    top: 11.5%;
+    left: 60.5%;
+}
+
+.close-button img {
+    max-width: 100%;
+}
+
+.donut-image {
+    position: absolute;
+    width: 10%;
+    top: 23%;
+    left: 45.5%;
+}
+
+.donut-image img {
+    max-width: 100%;
+}
+
+.donut-image img.deactive{
+    display: none;
+}
+
+.text-box {
+    position: absolute;
+    width: 23%;
+    top: 55%;
+    left: 39%;
+}
+
+.text-box.box2 {
+    top: 40.5%;
+}
+
+.text-box img {
+    max-width: 100%;
+}
+
+.text-box-text {
+    position: absolute;
+    width: 23%;
+    top: 56.5%;
+    left: 39%;
+    color: white;
+    font-size: 15px;
+    direction: rtl;
+}
+
+.text-box-text.box2 {
+    top: 42%;
+}
+
+.select-change-mission-button {
+    position: absolute;
+    width: 10%;
+    top: 73%;
+    left: 51%;
+}
+
+.select-change-mission-button img {
+    max-width: 100%;
+}
+
+.cancel-button {
+    position: absolute;
+    width: 10%;
+    top: 73%;
+    left: 40%;
+}
+
+.cancel-button img {
+    max-width: 100%;
+}
+
+/* ------------------------------- */
+
+/* loading */
+
+#loading {
+    position: fixed;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+}
+
+#loading.deactive {
+    display: none;
+}
+
+.load {
+    position: fixed;
+    top: 0%;
+    left: 41%;
+}
+
+/* -------------------------- */
+
+
+
+
+
+/* --------------------------- */
+
+
+
+@media only screen and (max-width: 320px) {
+
+    .show-info {
+        width: 100%;
+        top: 84%;
+    }
+    
+    .box {
+        height: 64px;
+    }
+
+    .donut-mission-text {
+        font-size: 10px;
+    }
+    
+    .mission-reward-text {
+        font-size: 20px;
+        top: 39%;
+        left: 26%;
+    }
+
+    .select-change-mission-popup {
+        max-width: 90%;
+        top: 10%;
+        left: 5%;
+    }
+
+    .close-button {
+        width: 12%;
+        top: 10.5%;
+        left: 76%;
+    }
+
+    .donut-image {
+        width: 28%;
+        top: 17%;
+        left: 36%;
+    }
+
+    .text-box {
+        width: 64%;
+        top: 35%;
+        left: 18%;
+    }
+
+    .text-box.box2 {
+        top: 27%;
+    }
+
+    .text-box-text {
+        width: 62%;
+        top: 36%;
+        left: 19%;
+        font-size: 10px;
+    }
+
+    .text-box-text.box2 {
+        top: 28%;
+    }
+
+    .select-change-mission-button {
+        width: 29%;
+        top: 44%;
+        left: 51%;
+    }
+
+    .cancel-button {
+        position: absolute;
+        width: 29%;
+        top: 44%;
+        left: 20%;
+    }
+
+    .load {
+        position: fixed;
+        left: 10%;
+    }
+}
+
+
+@media (min-width: 321px) and (max-width:360px) {
+    
+    .show-info {
+        width: 100%;
+        top: 81.5%;
+    }  
+
+    .box {
+        height: 73px;
+    }
+
+    .donut-mission-text {
+        font-size: 12px;
+    }
+    
+    .mission-reward-text {
+        font-size: 23px;
+        top: 39%;
+        left: 26%;
+    }
+
+    .select-change-mission-popup {
+        max-width: 90%;
+        top: 10%;
+        left: 5%;
+    }
+
+    .close-button {
+        width: 11%;
+        top: 11%;
+        left: 78%;
+    }
+
+    .donut-image {
+        width: 28%;
+        top: 18%;
+        left: 37%;
+    }
+
+    .text-box {
+        width: 64%;
+        top: 39%;
+        left: 18%;
+    }
+
+    .text-box.box2 {
+        top: 29%;
+    }
+    
+    .text-box-text {
+        width: 62%;
+        top: 40%;
+        left: 19%;
+        font-size: 11px;
+    }
+
+    .text-box-text.box2 {
+        top: 30%;
+    }
+
+    .select-change-mission-button {
+        width: 29%;
+        top: 50%;
+        left: 51%;
+    }
+
+    .cancel-button {
+        position: absolute;
+        width: 29%;
+        top: 50%;
+        left: 20%;
+    }
+
+    .load {
+        left: 15%;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 390px) {
+
+    .show-info {
+        width: 100%;
+        top: 82.5%;
+    }
+
+    .box {
+        height: 78px;
+    }
+
+    .donut-mission-text {
+        font-size: 12.5px;
+    }
+    
+    .mission-reward-text {
+        font-size: 25px;
+        top: 39%;
+        left: 26%;
+    }
+
+    .select-change-mission-popup {
+        max-width: 90%;
+        top: 10%;
+        left: 5%;
+    }
+
+    .close-button {
+        width: 11%;
+        top: 11%;
+        left: 78%;
+    }
+
+    .donut-image {
+        width: 28%;
+        top: 18%;
+        left: 37%;
+    }
+
+    .text-box {
+        width: 64%;
+        top: 39%;
+        left: 18%;
+    }
+
+    .text-box.box2 {
+        top: 29%;
+    }
+    
+    .text-box-text {
+        width: 62%;
+        top: 40%;
+        left: 19%;
+        font-size: 11px;
+    }
+
+    .text-box-text.box2 {
+        top: 30%;
+    }
+
+    .select-change-mission-button {
+        width: 29%;
+        top: 50%;
+        left: 51%;
+    }
+
+    .cancel-button {
+        position: absolute;
+        width: 29%;
+        top: 50%;
+        left: 20%;
+    }
+
+    .load {
+        left: 17%;
+    }
+}
+
+
+
