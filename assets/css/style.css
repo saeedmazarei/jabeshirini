@@ -205,7 +205,6 @@ header {
 
 .box {
     width: 25%;
-    height: 86px;
 }
 
 .donuts1 {
@@ -277,7 +276,6 @@ header {
 
 .show-info {
     position: fixed;
-    top: 74%;
     bottom: 0%;
 }
 
@@ -563,16 +561,7 @@ header {
 
 
 @media only screen and (max-width: 320px) {
-
-    .show-info {
-        bottom: 0%;
-        top: 84%;
-    }
-    
-    .box {
-        height: 64px;
-    }
-
+ 
     .donut-mission-text {
         font-size: 10px;
     }
@@ -587,16 +576,7 @@ header {
 }
 
 
-@media (min-width: 321px) and (max-width:360px) {
-    
-    .show-info {
-        bottom: 0%;
-        top: 81.5%;
-    }  
-
-    .box {
-        height: 73px;
-    }
+@media (min-width: 321px) and (max-width:360px) {  
 
     .donut-mission-text {
         font-size: 12px;
@@ -614,15 +594,6 @@ header {
 
 @media (min-width: 361px) and (max-width: 390px) {
 
-    .show-info {
-        bottom: 0%;
-        top: 82.5%;
-    }
-
-    .box {
-        height: 78px;
-    }
-
     .donut-mission-text {
         font-size: 12.5px;
     }
@@ -637,5 +608,15 @@ header {
 
 }
 
+@media (min-width: 430px) {
+
+    .show-info {
+        width: 430px;
+    }
+
+    .pop-container {
+        width: 420px;
+    }
+}
 
 
