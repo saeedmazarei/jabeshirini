@@ -1,35 +1,12 @@
 
 // show landing when click start or user register before
     function showLand() {
-        $("#start-landing").addClass("deactive");
         $("#show-landing").removeClass("deactive");
     }
-
-
-    
-  // select donut in box
-    function selectDonut() {
-    for(let i=0; i < donutsPick.length; i++) {
-        $(donutsPick[i]).click(function(){
-            $(".choosing").addClass("deactive");
-            $(".mission").removeClass("deactive");
-            showMission(i);
-            selectHistory.push(i);
-            $(this).addClass("deactive");
-            $(donutsSelect[i]).removeClass("deactive");
-            if(selectHistory.length > 1) {
-                $(donutsSelect[selectHistory[selectHistory.length-2]]).addClass("deactive");
-                $(donutsPick[selectHistory[selectHistory.length-2]]).removeClass("deactive");
-            }
-            });
-            $(donutsSelect[i]).click(function() {
-                selectHistory.push(i);
-            })
-    }
-    }
+  
 
     // show mission detail
-    function showMission(missionName) {
+    function showMission(missionName, donutsData) {
         missionnameHistory.push(chocolateList.get(missionName));
         $(chocolate[missionnameHistory[missionnameHistory.length-2]]).addClass("deactive");
         $(chocolate[missionnameHistory[missionnameHistory.length-1]]).removeClass("deactive");
@@ -102,11 +79,11 @@
         $(".change-mission-button").addClass("deactive");
         $(donutsSelect[selectHistory[selectHistory.length-1]]).addClass("deactive");
         $(donutsPick[selectHistory[selectHistory.length-1]]).removeClass("deactive");
-        selectDonut();
+        main();
     }
 
     // get reward
-    function getReward(){
+    function getReward(donutsData){
         changeMission();
         $(".gold-reward").addClass("deactive");
         $(".reward-number").addClass("deactive");
