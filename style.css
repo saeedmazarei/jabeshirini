@@ -1,0 +1,622 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: iranyekan;
+    src: url(../fonts/IRANSans_Medium.ttf);
+}
+
+@font-face {
+    font-family: iransansnum;
+    src: url(../fonts/IRANSansDNFaNum-Bold2.woff);
+}
+
+body {
+    font-family: iransansnum;
+    text-align: center;
+    max-width: 430px;
+    background-image: url(../images/pattern-min.png), linear-gradient(90deg, #0e4480, #2d95b9, #32c1d7, #33c7db, #32c1d7, #2d95b9, #0e4480);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* ---------------------------- */
+
+/* start landing page */
+
+#start-landing.deactive {
+    display: none;
+}
+
+#title {
+    width: 40%;
+    height:fit-content;
+    margin: 7% 5% 0% 0%;
+}
+
+#help {
+    width: 15%;
+    margin: 5% 0% 0% 5%;
+}
+
+#info {
+    width: 80%;
+    margin: auto;
+}
+
+#start-button {
+    width: 50%;
+    margin-top: 5%;
+}
+
+/* ----------------------------- */
+
+/* landing */
+
+#show-landing.deactive {
+    display: none;
+}
+
+.show-landing-container {
+    width: 95%;
+    margin: auto;
+}
+
+/* ----------------------------- */
+
+/* donut top */
+.notice {
+    position: relative;
+    margin-top: 2%;
+}
+
+.notice img {
+    max-width: 100%;
+    position: relative;
+}
+
+.cup {
+    width: 34.5%;
+    position: absolute;
+    top: 29%;
+    left: 33%;
+}
+
+.cup img {
+    max-width: 100%;
+}
+
+.cup.deactive {
+    display: none;
+}
+
+.donut-min {
+    width: 12%;
+    display: inline;
+    position: absolute;
+}
+
+.donut-min img {
+    max-width: 100%;
+}
+
+.donut-min.deactive img {
+    opacity: 0.6;
+}
+
+.donut4 {
+    top: 31%;
+    left: 8.5%;
+}
+
+.donut3 {
+    top: 61%;
+    left: 17%;
+}
+
+.donut2 {
+    top: 73%;
+    left: 44%;
+}
+
+.donut1{
+    top: 61%;
+    left: 71%;
+}
+
+.donut5 {
+    top: 31%;
+    left: 79.5%;
+}
+
+.get-coin {
+    position: absolute;
+    width: 30%;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.get-coin.deactive {
+    display: none;
+}
+
+.coin1 {
+    animation-name: coinget;
+    top: 10.5%;
+    left: 35%;
+}
+
+.coin2 {
+    animation-name: coinget2;
+    left: 20%;
+    /* top: 13%; */
+}
+
+@keyframes coinget {
+    0% {top: 4%;}
+    100% {top: 10.5%;}
+}
+
+@keyframes coinget2 {
+    0% {top: 6%;}
+    100% {top: 13%;}
+}
+
+/* -------------------------------------- */
+
+/* midlle box */
+
+.donut-box {
+    margin-top: 5%;
+}
+
+.donut-box img {
+    max-width: 100%;
+}
+
+.donuts.deactive {
+    display: none;
+}
+
+.donuts {
+    position: absolute;
+    width: 25%;
+}
+
+.donut {
+    width: 85%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 25%;
+}
+
+.donuts1 {
+    top: 0%;
+    left: 1%;
+}
+
+.donuts2 {
+    top: 0%;
+    left: 25%;
+}
+
+.donuts3 {
+    top: 0%;
+    left: 50%;
+}
+
+.donuts4 {
+    top: 0%;
+    left: 75%;
+}
+
+.donuts5 {
+    top: 33%;
+    left: 0%;
+}
+
+.donuts6 {
+    top: 33%;
+    left: 25%;
+}
+
+.donuts7 {
+    top: 33%;
+    left: 50%;
+}
+
+.donuts8 {
+    top: 33%;
+    left: 75%;
+}
+
+.donuts9 {
+    top: 67%;
+    left: 0%;
+}
+
+.donuts10 {
+    top: 67%;
+    left: 25%;
+}
+
+.donuts11 {
+    top: 67%;
+    left: 50%;
+}
+
+.donuts12 {
+    top: 67%;
+    left: 75%;
+}
+
+/* -------------------------------- */
+
+/* show-info */
+#show-landing {
+    padding-bottom: 160px
+}
+
+.show-info {
+    position: fixed;
+    bottom: 0%;
+}
+
+.mission {
+    position: relative;
+}
+
+.nav img {
+    max-width: 100%;
+}
+
+.nav.deactive {
+    display: none;
+}
+
+/* choose mission */
+
+.mission-box {
+    width: 65%;
+}
+
+.donut-mission {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+.mission-reward {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.chocolate {
+    width: 13%;
+    position: absolute;
+    left: 85%;
+    top: 40%;
+}
+
+.choos-mission-button {
+    position: absolute;
+    top: 65%;
+}
+
+.choos-mission-button.deactive {
+    display: none;
+}
+
+.change-mission-button {
+    position: absolute;
+    width: 30%;
+    top: 70%;
+    left: 68%;
+}
+
+.change-mission-button.deactive {
+    display: none;
+}
+
+.progress-bar {
+    width: 65%;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #efefef;
+    display: flex;
+    position: absolute;
+    top: 75%;
+    left: 2%;
+}
+
+.progress-bar.deactive {
+    display: none;
+}
+
+.pr-bar {
+    background-image: linear-gradient(to top, #81ff8d 0% , #81ff8d 50% , #2aeb3c 50% , #2aeb3c 100% );
+    border-radius: 5px;
+}
+
+.gold-reward {
+    width: 65%;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.gold-reward.deactive {
+    display: none;
+}
+
+.reward-number {
+    position: absolute;
+    top: 43%;
+    left: 20%;
+}
+
+.reward-number.deactive {
+    display: none;
+}
+
+.reward-number span {
+    font-size: 45px;
+    color: #754100;
+}
+
+.chocolate img.deactive {
+    display: none;
+}
+
+.donut-mission-text {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    width: 64%;
+    font-size: 12.5px;
+    color: white;
+    direction: rtl;
+}
+
+.mission-reward-text {
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    font-size: 25px;
+    color: white;
+}
+
+.progress-bar-text {
+    position: absolute;
+    top: 74%;
+    left: 31%;
+    color: #1c4b43;
+}
+
+.progress-bar-text.deactive {
+    display: none;
+}
+
+/* -------------------------------- */
+
+
+
+/* --------------------------------- */
+
+/* popup */
+
+.popup {
+    position: fixed;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+}
+
+.popup.deactive {
+    display: none;
+}
+
+.pop-container {
+    width: 95%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+}
+
+.select-change-mission-popup {
+    width: 100%;
+}
+
+.select-change-mission-popup img {
+    width: 100%;
+}
+
+.close-button {
+    position: absolute;
+    width: 12%;
+    top: 2%;
+    left: 81%;
+}
+
+.close-button img {
+    max-width: 100%;
+}
+
+.donut-image {
+    position: absolute;
+    width: 25%;
+    top: 17%;
+    left: 38.5%;
+}
+
+.donut-image img {
+    max-width: 100%;
+}
+
+.donut-image img.deactive{
+    display: none;
+}
+
+.text-box {
+    position: absolute;
+    width: 70%;
+    top: 55%;
+    left: 15%;
+}
+
+.text-box.box2 {
+    top: 36%;
+}
+
+.text-box img {
+    max-width: 100%;
+}
+
+.text-box-text {
+    position: absolute;
+    width: 68%;
+    top: 57%;
+    left: 16%;
+    color: white;
+    font-size: 13px;
+    direction: rtl;
+}
+
+.text-box-text.box2 {
+    top: 38%;
+}
+
+.select-change-mission-button {
+    position: absolute;
+    width: 34%;
+    top: 73%;
+    left: 51%;
+}
+
+.select-change-mission-button img {
+    max-width: 100%;
+}
+
+.cancel-button {
+    position: absolute;
+    width: 34%;
+    top: 73%;
+    left: 14%;
+}
+
+.cancel-button img {
+    max-width: 100%;
+}
+
+/* ------------------------------- */
+
+/* loading */
+
+#loading {
+    position: fixed;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+}
+
+#loading.deactive {
+    display: none;
+}
+
+
+/* -------------------------- */
+
+
+
+
+
+/* --------------------------- */
+
+
+
+@media only screen and (max-width: 320px) {
+ 
+    .donut-mission-text {
+        font-size: 10px;
+    }
+    
+    .mission-reward-text {
+        left: 26%;
+    }
+
+    .text-box-text {
+        font-size: 10px;
+    }
+}
+
+
+@media (min-width: 321px) and (max-width:360px) {  
+
+    .donut-mission-text {
+        font-size: 12px;
+    }
+    
+    .mission-reward-text {
+        font-size: 23px;
+    }
+    
+    .text-box-text {
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 361px) and (max-width: 390px) {
+
+    .donut-mission-text {
+        font-size: 12.5px;
+    }
+    
+    .mission-reward-text {
+        font-size: 25px;
+    }
+    
+    .text-box-text {
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 430px) {
+
+    .show-info {
+        width: 430px;
+    }
+
+    .pop-container {
+        width: 420px;
+    }
+}
+
+
