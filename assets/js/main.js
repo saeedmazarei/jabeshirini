@@ -1,16 +1,16 @@
 
-const donutsPick = $(".donutss");
-const donutsSelect = $(".select");
-const chocolate = $(".chocolate img");
-const popup = $(".popup");
-const chocolatePopup = $(".donut-image img");
-const donutTop = $(".donut-min");
-const claimCup = $(".cup");
+var donutsPick = $(".donutss");
+var donutsSelect = $(".select");
+var chocolate = $(".chocolate img");
+var popup = $(".popup");
+var chocolatePopup = $(".donut-image img");
+var donutTop = $(".donut-min");
+var claimCup = $(".cup");
 
-const urlParams = new URLSearchParams(window.location.search);
-const hashId = urlParams.get('player_id');
+var urlParams = new URLSearchParams(window.location.search);
+var hashId = urlParams.get('player_id');
 
-const chocolateList = new Map([
+var chocolateList = new Map([
     [0, 2],
     [1, 3],
     [2, 2],
@@ -25,7 +25,7 @@ const chocolateList = new Map([
     [11, 0],
 ]);
 
-const deleteDonuts = {
+var deleteDonuts = {
     yellow_missions: [0, 2, 7],
     green_missions: [1, 3, 10],
     red_missions: [4, 11],
@@ -33,36 +33,39 @@ const deleteDonuts = {
     purple_missions: [6, 9] 
 }
 
-let selectHistory = [];
-let missionnameHistory = [];
-let landingData;
+var selectHistory = [];
+var missionnameHistory = [];
+var landingData;
 
 
 landingApi();
 // fakeApi();
 
+$("#start-button").click(function() {
+    registerUser();
+    $("#start-landing").addClass("deactive");
+})
 
 function main() {
 
-    const donutsData = new Map([
-        [0, landingData.data.yellow_missions[0]],
-        [1, landingData.data.green_missions[0]],
-        [2, landingData.data.yellow_missions[1]],
-        [3, landingData.data.green_missions[1]],
-        [4, landingData.data.red_missions[0]],
-        [5, landingData.data.blue_missions[0]],
-        [6, landingData.data.purple_missions[0]],
-        [7, landingData.data.yellow_missions[2]],
-        [8, landingData.data.blue_missions[1]],
-        [9, landingData.data.purple_missions[1]],
-        [10, landingData.data.green_missions[2]],
-        [11, landingData.data.red_missions[1]],
-    ]);
-
-    let registerStatus = landingData.data.registered;
-
+    var registerStatus = landingData.data.registered;
+    
     // register check    
     if (registerStatus == true) {
+        var donutsData = new Map([
+            [0, landingData.data.yellow_missions[0]],
+            [1, landingData.data.green_missions[0]],
+            [2, landingData.data.yellow_missions[1]],
+            [3, landingData.data.green_missions[1]],
+            [4, landingData.data.red_missions[0]],
+            [5, landingData.data.blue_missions[0]],
+            [6, landingData.data.purple_missions[0]],
+            [7, landingData.data.yellow_missions[2]],
+            [8, landingData.data.blue_missions[1]],
+            [9, landingData.data.purple_missions[1]],
+            [10, landingData.data.green_missions[2]],
+            [11, landingData.data.red_missions[1]],
+        ]);
         showLand();
 
     
@@ -173,10 +176,6 @@ function main() {
     else {
         $("#start-landing").removeClass("deactive");
         // when click on start button show loading
-        $("#start-button").click(function() {
-            registerUser();
-            landingApi();
-        })
     }
 }
 

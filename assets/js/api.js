@@ -15,7 +15,8 @@ function registerUser() {
     fetch("https://quizofkings.com/challenge-api/v1/challenge/register", requestOptions)
     .then(response => {response.text();
     })
-    .then(result => console.log(result))
+    .then(result => {console.log(result);
+    landingApi()})
     .catch(error => {console.log('error', error)
     $("#loading").addClass("deactive");
     $("#show-landing").removeClass("deactive");
