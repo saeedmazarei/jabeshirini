@@ -203,6 +203,9 @@ header {
     flex-wrap: wrap;
 }
 
+.donut img {
+    width: 25%
+}
 .box {
     width: 25%;
 }
@@ -276,7 +279,7 @@ header {
 
 .show-info {
     position: fixed;
-    bottom: 0%;
+    bottom: -1%;
 }
 
 .mission {
