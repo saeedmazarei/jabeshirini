@@ -90,6 +90,8 @@ function main() {
     });
 
 
+    
+
     // delete donuts when of of them claiming
     for(let i in deleteDonuts){
         for(let y = 0; y < (landingData.data[i]).length; y++) {
@@ -102,27 +104,19 @@ function main() {
         }
     }
 
-    // select donut in box
-    for(let i=0; i < donutsPick.length; i++) {
-        $(donutsPick[i]).click(function(){
-            $(".choosing").addClass("deactive");
-            $(".mission").removeClass("deactive");
-            showMission(i, donutsData);
-            selectHistory.push(i);
-            $(this).addClass("deactive");
-            $(donutsSelect[i]).removeClass("deactive");
-            if(selectHistory.length > 1) {
-                $(donutsSelect[selectHistory[selectHistory.length-2]]).addClass("deactive");
-                $(donutsPick[selectHistory[selectHistory.length-2]]).removeClass("deactive");
-            }
-            });
-            $(donutsSelect[i]).click(function() {
-                selectHistory.push(i);
-            })
-    }
 
+    // for(let i = 0; i < 12; i++) {
+    //     console.log(donutsData.get(i).status);
+    //     if(donutsData.get(i).reward_status == 'Claimed') {
+    //         $(donutTop[chocolateList.get(i)]).removeClass("deactive");
+    //     }
+    // }
+
+    selectDonut(donutsData);
+
+    
     $("#select-mission-button").click(function(){
-        if(donutsData.get(selectHistory[selectHistory.length-1]).max_score == donutsData.get(selectHistory[selectHistory.length-1]).score){
+        if(donutsData.get(selectHistory[selectHistory.length-1]).reward_status == "Unlocked"){
             $(donutsPick).unbind();
             $(".coin2").removeClass("deactive");
             claiming();
@@ -135,10 +129,12 @@ function main() {
             $(".change-mission-button").removeClass("deactive");
         }
         $(".popup").addClass("deactive");
+        // claimApi()
     })
 
     $("#change-mission-button-popup").click(function(){
-        changeMission();
+        changeMission(donutsData);
+        landingApi();
         $(".popup").addClass("deactive");
     })
 

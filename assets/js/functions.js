@@ -4,14 +4,34 @@
         $("#show-landing").removeClass("deactive");
     }
   
+        // select donut in box
+    function selectDonut(donutsData) {
+        for(let i=0; i < donutsPick.length; i++) {
+            $(donutsPick[i]).click(function(){
+                $(".choosing").addClass("deactive");
+                $(".mission").removeClass("deactive");
+                showMission(i, donutsData);
+                selectHistory.push(i);
+                $(this).addClass("deactive");
+                $(donutsSelect[i]).removeClass("deactive");
+                if(selectHistory.length > 1) {
+                    $(donutsSelect[selectHistory[selectHistory.length-2]]).addClass("deactive");
+                    $(donutsPick[selectHistory[selectHistory.length-2]]).removeClass("deactive");
+                }
+                });
+                $(donutsSelect[i]).click(function() {
+                    selectHistory.push(i);
+                })
+        }
+    }
 
     // show mission detail
     function showMission(missionName, donutsData) {
         missionnameHistory.push(chocolateList.get(missionName));
         $(chocolate[missionnameHistory[missionnameHistory.length-2]]).addClass("deactive");
         $(chocolate[missionnameHistory[missionnameHistory.length-1]]).removeClass("deactive");
-        $(chocolatePopup[missionnameHistory[missionnameHistory.length-1]]).removeClass("deactive");
         $(chocolatePopup[missionnameHistory[missionnameHistory.length-2]]).addClass("deactive");
+        $(chocolatePopup[missionnameHistory[missionnameHistory.length-1]]).removeClass("deactive");
         $(".mission-reward-text").text((donutsData.get(missionName)).rewards[1].num);
         $(".progress-bar-text").text(`${(donutsData.get(missionName)).score}/${donutsData.get(missionName).max_score}`);
         let x = donutsData.get(missionName).score * 100;
@@ -79,7 +99,6 @@
         $(".change-mission-button").addClass("deactive");
         $(donutsSelect[selectHistory[selectHistory.length-1]]).addClass("deactive");
         $(donutsPick[selectHistory[selectHistory.length-1]]).removeClass("deactive");
-        main();
     }
 
     // get reward

@@ -41,7 +41,8 @@ function claimApi(mission) {
     .then(response => {response.text();
     })
     .then(result => {console.log(result);
-    landingApi();
+        selectHistory.push(-1);
+        landingApi();   
 })
     .catch(error => {console.log('error', error)
     $("#loading").addClass("deactive");
