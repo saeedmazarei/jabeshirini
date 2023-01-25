@@ -134,7 +134,7 @@ function main() {
 
     $("#change-mission-button-popup").click(function(){
         changeMission(donutsData);
-        landingApi();
+        selectDonut(donutsData)
         $(".popup").addClass("deactive");
     })
 
