@@ -3,45 +3,6 @@
     function showLand() {
         $("#show-landing").removeClass("deactive");
     }
-  
-        // select donut in box
-    function selectDonut(donutsData) {
-        for(let i=0; i < donutsPick.length; i++) {
-            $(donutsPick[i]).click(function(){
-                $(".choosing").addClass("deactive");
-                $(".mission").removeClass("deactive");
-                showMission(i, donutsData);
-                selectHistory.push(i);
-                $(this).addClass("deactive");
-                $(donutsSelect[i]).removeClass("deactive");
-                if(selectHistory.length > 1) {
-                    $(donutsSelect[selectHistory[selectHistory.length-2]]).addClass("deactive");
-                    $(donutsPick[selectHistory[selectHistory.length-2]]).removeClass("deactive");
-                }
-                });
-                $(donutsSelect[i]).click(function() {
-                    selectHistory.push(i);
-                })
-        }
-    }
-
-    // show mission detail
-    function showMission(missionName, donutsData) {
-        missionnameHistory.push(chocolateList.get(missionName));
-        $(chocolate[missionnameHistory[missionnameHistory.length-2]]).addClass("deactive");
-        $(chocolate[missionnameHistory[missionnameHistory.length-1]]).removeClass("deactive");
-        $(chocolatePopup[missionnameHistory[missionnameHistory.length-2]]).addClass("deactive");
-        $(chocolatePopup[missionnameHistory[missionnameHistory.length-1]]).removeClass("deactive");
-        $(".mission-reward-text").text((donutsData.get(missionName)).rewards[1].num);
-        $(".progress-bar-text").text(`${(donutsData.get(missionName)).score}/${donutsData.get(missionName).max_score}`);
-        let x = donutsData.get(missionName).score * 100;
-        x = x / donutsData.get(missionName).max_score;
-        $(".pr-bar").css("width", `${x}%`);
-        $(".donut-mission-text").text(changeName((donutsData.get(missionName)).name));
-        $(".text-box-text").text(changeName((donutsData.get(missionName)).name));
-    }
-   
-
 
     // change name from english to persian
     function changeName(name) {
@@ -86,25 +47,4 @@
         $(".gold-reward").removeClass("deactive");
         $(".reward-number").removeClass("deactive");
         $(".choos-mission-button").addClass("deactive");
-    }
-
-    // change mission button
-    function changeMission() {
-        $(".coin2").addClass("deactive")
-        $(".choosing").removeClass("deactive");
-        $(".mission").addClass("deactive");
-        $(".choos-mission-button").removeClass("deactive");
-        $(".progress-bar").addClass("deactive");
-        $(".progress-bar-text").addClass("deactive");
-        $(".change-mission-button").addClass("deactive");
-        $(donutsSelect[selectHistory[selectHistory.length-1]]).addClass("deactive");
-        $(donutsPick[selectHistory[selectHistory.length-1]]).removeClass("deactive");
-    }
-
-    // get reward
-    function getReward(donutsData){
-        changeMission();
-        $(".gold-reward").addClass("deactive");
-        $(".reward-number").addClass("deactive");
-        claimApi(donutsData.get(selectHistory[selectHistory.length-1]).name);
     }
