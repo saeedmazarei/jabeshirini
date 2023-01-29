@@ -235,6 +235,10 @@ header {
     display: flex;
     position: relative;
     margin: auto;
+    font-size: 0%;
+    -webkit-justify-content: center;
+    -webkit-box-flex: 4;
+    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
@@ -248,7 +252,7 @@ header {
 
 .donuts1 {
     top: 0%;
-    left: 1%;
+    left: 0.75%;
 }
 
 .donuts2 {
@@ -283,7 +287,7 @@ header {
 
 .donuts8 {
     top: 33%;
-    left: 75%;
+    left: 74%;
 }
 
 .donuts9 {
