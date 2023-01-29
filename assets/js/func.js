@@ -48,3 +48,29 @@ function claiming() {
   $(".reward-number").removeClass("deactive");
   $(".choos-mission-button").addClass("deactive");
 }
+
+   // show mission detail
+var showMissions = function showMissions(donutsData ,missionName) {
+    $(chocolate[chocolateList[missionName]]).removeClass("deactive");
+    $(chocolatePopup[chocolateList[missionName]]).addClass("deactive");
+    $(".mission-reward-text").text(donutsData[missionName].rewards[1].num);
+    $(".progress-bar-text").text("".concat(donutsData[missionName].score, "/").concat(donutsData[missionName].max_score));
+    var x = donutsData[missionName].score * 100;
+    x = x / donutsData[missionName].max_score;
+    $(".pr-bar").css("width", x + "%");
+    $(".donut-mission-text").text(changeName(donutsData[missionName].name));
+    $(".text-box-text").text(changeName(donutsData[missionName].name));
+  };
+
+  var changeMissions = function changeMissions(donutCounter) {
+    $(".coin2").addClass("deactive");
+    $(".choosing").removeClass("deactive");
+    $(".mission").addClass("deactive");
+    $(".choos-mission-button").removeClass("deactive");
+    $(chocolate[chocolateList[donutCounter]]).addClass("deactive");
+    $(".progress-bar").addClass("deactive");
+    $(".progress-bar-text").addClass("deactive");
+    $(".change-mission-button").addClass("deactive");
+    $(donutsSelect[donutCounter]).addClass("deactive");
+    $(donutsPick[donutCounter]).removeClass("deactive");
+  };
