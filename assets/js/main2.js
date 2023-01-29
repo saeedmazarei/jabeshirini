@@ -56,6 +56,21 @@ function main() {
     };
     showLand();
 
+    //  show 3 cup status
+
+    if (landingData.data.finial_mission[0].reward_status == "Unlocked") {
+      $(claimCup[0]).addClass("deactive");
+      $(claimCup[1]).removeClass("deactive");
+      $(".coin1").removeClass("deactive");
+    } 
+    
+    else if (landingData.data.finial_mission[0].reward_status == "Claimed") {
+      $(claimCup[0]).addClass("deactive");
+      $(claimCup[1]).addClass("deactive");
+      $(claimCup[2]).removeClass("deactive");
+      $('.coin1').addClass("deactive");
+    }
+
     // delete donuts when of of them claiming
     for (var i in deleteDonuts) {
       for (var y = 0; y < landingData.data[i].length; y++) {
@@ -115,18 +130,6 @@ function main() {
         };
         selectDonut();
 
-        //  show 3 cup status
-        if (landingData.data.finial_mission[0].reward_status == "Unlocked") {
-          $(claimCup[0]).addClass("deactive");
-          $(claimCup[1]).removeClass("deactive");
-          $(".coin1").removeClass("deactive");
-        } else if (landingData.data.finial_mission[0].reward_status == "Claimed") {
-          $(claimCup[0]).addClass("deactive");
-          $(claimCup[1]).addClass("deactive");
-          $(claimCup[2]).removeClass("deactive");
-          $('.coin1').addClass("deactive");
-        }
-
         // show mission detail
         var showMission = function showMission(missionName) {
           missionnameHistory.push(chocolateList[missionName]);
@@ -142,12 +145,6 @@ function main() {
           $(".donut-mission-text").text(changeName(donutsData[missionName].name));
           $(".text-box-text").text(changeName(donutsData[missionName].name));
         };
-        $(claimCup[1]).click(function () {
-          $(claimCup[1]).addClass("deactive");
-          $(claimCup[2]).removeClass("deactive");
-          $(".coin1").addClass("deactive");
-          claimApi(landingData.data.finial_mission[0].name, selectHistory);
-        });
         $("#select-mission-button").unbind().click(function () {
           if (donutsData[selectHistory[selectHistory.length - 1]].max_score == donutsData[selectHistory[selectHistory.length - 1]].score) {
             $(donutsPick).unbind();
@@ -199,6 +196,14 @@ function main() {
       $(".reward-number").addClass("deactive");
       claimApi(donutsData[lockAddress].name);
     };
+
+    $(claimCup[1]).click(function () {
+      $(claimCup[1]).addClass("deactive");
+      $(claimCup[2]).removeClass("deactive");
+      $(".coin1").addClass("deactive");
+      claimApi(landingData.data.finial_mission[0].name, selectHistory);
+    });
+
     for (var _i2 = 0; _i2 < 12; _i2++) {
       if (donutsData[_i2].reward_status == 'Claimed') {
         $(donutTop[chocolateList[_i2]]).removeClass("deactive");
