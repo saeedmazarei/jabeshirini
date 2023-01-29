@@ -84,7 +84,7 @@ function main() {
     }
     for (var _i3 = 0; _i3 < 12; _i3++) {
       for (var donutCounter = 0; donutCounter < 12; donutCounter++) {
-        if (donutsData[donutCounter].status == 'Unlocked') {
+        if (donutsData[donutCounter].status == 'Unlocked' && donutsData[donutCounter].reward_status != "Claimed") {
           lockAddress = donutCounter;
           $(".change-mission-button").removeClass("deactive");
           if (donutsData[lockAddress].reward_status == "Unlocked") {
